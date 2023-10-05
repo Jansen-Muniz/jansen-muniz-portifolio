@@ -1,0 +1,421 @@
+:root{
+  --color1: #222;
+  --color2: #04AA6D;
+  --color3: #02ff02;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main{
+  background-color: #333;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#logo-container img{
+  width: 5rem;
+}
+
+#inner-nav{
+  background-color: var(--color1);
+  overflow: hidden;
+}
+
+#inner-nav a{
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: var(--color2);
+}
+
+.hide{
+  display: none;
+}
+
+@media screen and (min-width:481px) and (max-width: 768px){
+  #logo{
+    width: 7rem;
+  }
+  
+  #inner-nav a:not(:first-child){
+    display: none;
+  }
+
+  #inner-nav #button-responsive-menu{
+    float: right;
+    display: block;
+  }
+
+  #inner-nav{
+    position: relative;
+  }
+
+  #button-responsive-menu{
+    position: absolute;
+    right: 0;
+    top: 2.4rem;
+  }
+
+  #button-responsive-menu i{
+    font-size: 2rem;
+  }
+
+  #inner-nav #menu-item{
+    float: none;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--color2);
+    color: #222;
+    border-bottom: 1px solid var(--color3);
+  }
+
+  main{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main #first-image img{
+    width: 18rem;
+  }
+
+  main div{
+    margin-bottom: 3rem;
+  }
+
+  main #images-techs .img-techs{
+    width: 4rem;
+  }
+
+  main #about-me{
+    background-color: #ddd;
+    text-align: justify;
+    padding: 12px;
+    padding-top: 11rem;
+    padding-bottom: 11rem;
+  }
+
+  main #about-me p{
+    font-size: 20px;
+    line-height: 2rem;
+  }
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+.main-content {
+  background-color: black;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  width: 100%;
+  background-color: black;
+}
+
+header img {
+  width: 15rem;
+}
+
+h1 {
+  font-family: 'Tilt Warp', cursive;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+nav>ul {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+nav li {
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+nav ul a {
+  display: block;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
+.nav-list ul {
+  display: flex;
+  gap: 3rem;
+}
+
+.projects-content li a {
+  display: none;
+}
+
+.projects-items>.projects-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.projects-items:hover .projects-content {
+  display: block;
+  color: black;
+}
+
+.projects-items ul li a {
+  background-color: rgba(127, 255, 212, 0.185);
+  display: flex;
+  justify-content: center;
+  padding-left: 2rem;
+  padding: .5rem;
+}
+
+.projects-items ul li a:hover {
+  background-color: aquamarine;
+  color: black;
+}
+
+.navbar span {
+  font-size: .8rem;
+}
+
+.mobile-menu-icon, .mobile-menu {
+  display: none;
+}
+
+a:hover {
+  color: rgb(182, 255, 235);
+}
+
+.section-one {
+  padding-top: 12rem;
+}
+
+.section-one div {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.section-one img {
+  width: 20rem;
+}
+
+.projects a {
+  font-size: 1rem;
+}
+
+.projects-content {
+  visibility: hidden;
+}
+
+.projects-items:hover .projects-content {
+  visibility: visible;
+}
+
+.menu .projects-items a {
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+main {
+  max-width: 70%;
+  margin: auto;
+}
+
+section h1, h2, p {
+  color: aquamarine;
+}
+
+section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.skills .skills-content {
+  padding-top: 17rem;
+  margin-bottom: 17rem;
+  text-align: center;
+}
+
+.logo-react, .skills img {
+  width: 5rem;
+}
+
+.skills .img-techs ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.projects, .js-projects {
+  padding-top: 11rem;
+  text-align: center;
+}
+
+.image-container-html-css-projects,
+.image-js-projects-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  border: 1px solid aquamarine;
+  border-radius: 2rem;
+}
+
+.image:hover {
+  box-shadow: 0px 0px 10px 1px aquamarine;
+}
+
+.img1 {
+  background: url(../imagens/site-adv.png) center;
+  background-size: cover;
+  margin: 0 auto;
+  width: 20%;
+  padding: 10rem;
+}
+
+.images-container1,
+.images-container2,
+.images-container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+}
+
+.images-container1,
+.images-container2,
+.images-container3,
+.image-container-html-css-projects {
+  margin-top: 2rem;
+}
+
+.image-js-projects-container .image {
+  width: 12%;
+  padding: 10rem;
+}
+
+.img2 {
+  background: url(../imagens/quiz-interativo.png) center center no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.img3 {
+  background: url(../imagens/todo-list.png) center no-repeat;
+  background-size: cover;
+}
+
+.img4 {
+  background: url(../imagens/weather-app.png) center;
+  background-size: cover;
+
+}
+
+.img5 {
+  background: url(../imagens/conversor-de-moedas.png) center;
+  background-size: cover;
+
+}
+
+.img6 {
+  background: url(../imagens/busca-livros-biblicos.png) center;
+  background-size: cover;
+
+}
+
+aside {
+  max-width: 70%;
+  margin: 10rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+
+aside img {
+  width: 20rem;
+}
+
+aside>ul>li {
+  color: aquamarine;
+  list-style-type: none;
+}
+
+aside a,
+aside .fa-linkedin-square,
+aside .fa-github {
+  font-size: 1.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+footer p {
+  color: aquamarine;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  font-weight: bold;
+  float: right;
+  background-color: rgba(0, 255, 255, 0.342);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top-btn span {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+} */
